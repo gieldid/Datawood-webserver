@@ -17,4 +17,15 @@ router.get("/", async function (request, response) {
     }
 });
 
+router.post("/update", async function(request, response){
+    var id = request.body.id;
+    var weight = request.body.weight;
+    try {
+        weightModel.updateWeight(id,weight);
+        response.end("Updated id: "+id +" to this weight: " + weight);
+    } catch (error) {
+        response.end("Failed to update");
+    }
+});
+
 module.exports = router;

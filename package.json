@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/gieldid/Datawood-webserver#readme",
   "dependencies": {
-    "express": "4.17.1",
+    "body-parser": "^1.19.0",
     "dotenv": "10.0.0",
-    "mariadb":"2.5.5",
+    "express": "4.17.1",
+    "mariadb": "2.5.5",
     "serialport": "9.2.8"
   }
 }

@@ -1,5 +1,3 @@
-const { connect } = require("../controllers/weight.route.js");
-
 pool = require("../utils/db.js");
 module.exports = {
   async read(plankname) {
@@ -55,8 +53,8 @@ module.exports = {
   async updateWeight(id,weight){
     try{
       conn = await pool.getConnection();
-      sql ="UPDATE Planks SET weight = ? Where id = ?;";
-      conn.query(sql,[id,weight]);
+      sql = "UPDATE Planks SET weight = ? WHERE id = ?;";
+      conn.query(sql,[weight,id]);
     }catch(err){
       throw err;
     }
