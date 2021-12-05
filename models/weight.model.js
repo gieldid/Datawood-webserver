@@ -1,5 +1,9 @@
 pool = require("../utils/db.js");
 module.exports = {
+  /**
+   * Return one plank
+   * @param  {The name of the plank to return} plankname
+   */
   async read(plankname) {
     try {
       conn = await pool.getConnection();
@@ -15,6 +19,10 @@ module.exports = {
       throw err;
     }
   },
+  
+  /**
+   * Get the last added plank
+   */
   async last() {
     try {
       conn = await pool.getConnection();
@@ -30,6 +38,9 @@ module.exports = {
       throw err;
     }
   },
+  /**
+   * Returns all Planks
+   */
   async list() {
     try {
       conn = await pool.getConnection();
@@ -41,6 +52,11 @@ module.exports = {
       throw err;
     }
   },
+  /**
+   * Inserts just the weight
+   * @param  {Weight to be added to the database} weight
+   */
+  
   async insertWeight(weight){
     try{
       conn = await pool.getConnection();
@@ -50,6 +66,11 @@ module.exports = {
       throw err;
     }
   },
+  /**
+   * Updates row with new weight
+   * @param  {Row to update} id
+   * @param  {Weight it should get} weight
+   */
   async updateWeight(id,weight){
     try{
       conn = await pool.getConnection();
