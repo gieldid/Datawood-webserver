@@ -4,8 +4,6 @@ const weightModel = require("../models/weight.model");
 const weigthScaleReader = require("../utils/scale/WeightScaleReader");
 
 router.get("/", async function (request, response) {
-    //execute task to get weight here
-
     let weightOnScale = await weigthScaleReader.getWeight();
     console.log("weightonscale; " + weightOnScale);
     if(weightOnScale === "Failed to connect to rs232 device" || !weightOnScale){

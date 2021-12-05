@@ -9,6 +9,9 @@ const pool = mariadb.createPool({
 });
 
 module.exports = {
+  /**
+   * Get db connection
+   */
   getConnection() {
     return new Promise(function (res, rej) {
       pool.getConnection()
