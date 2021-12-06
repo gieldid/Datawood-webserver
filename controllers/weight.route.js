@@ -3,6 +3,12 @@ const router = express.Router();
 const weightModel = require("../models/weight.model");
 const weigthScaleReader = require("../utils/scale/WeightScaleReader");
 
+router.get("/noscale", async function (request, response) {
+    let weightData = await weightModel.last();
+    response.json({weight: weightData.weight});
+});
+
+
 router.get("/", async function (request, response) {
     let weightOnScale = await weigthScaleReader.getWeight();
     console.log("weightonscale; " + weightOnScale);
