@@ -19,6 +19,7 @@ module.exports = {
           res(conn);
         })
         .catch(function (error) {
+          console.log(process.env.DB_HOST);
           rej(error);
         });
     });

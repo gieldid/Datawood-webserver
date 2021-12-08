@@ -1,5 +1,6 @@
 const SerialPort = require('serialport');
 const Readline = require('@serialport/parser-readline');
+const weightModel = require("../models/weight.model");
 
 module.exports = {
   /**
@@ -26,11 +27,12 @@ module.exports = {
           data = data.replace('kg','');
           var weightInGrams = data.replace('.','');
           if(weightInGrams != 000){
-  
+            return weightInGrams;
             console.log(weightInGrams);
             port.close(function (err) {
               return weightInGrams;
-            })
+            });
+            
           }
         }
       }) 
