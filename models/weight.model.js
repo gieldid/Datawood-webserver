@@ -63,7 +63,7 @@ module.exports = {
       sql = "INSERT INTO Planks (weight) VALUES(?);";
       conn.query(sql, weight);
     }catch(err){
-      console.log(weight);
+      console.log("error: "+ err + " weight: " +  weight);
       throw err;
     }
   },

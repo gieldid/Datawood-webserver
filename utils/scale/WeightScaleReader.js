@@ -1,12 +1,12 @@
 const SerialPort = require('serialport');
 const Readline = require('@serialport/parser-readline');
-const weightModel = require("../models/weight.model");
+
 
 module.exports = {
   /**
    * Gets the weight from the scale by using the rs232 port.
    */
-  async getWeight(){
+  getWeight(){
     try {
       const port = new SerialPort('/dev/ttyUSB0', {
         baudRate: 9600,
@@ -27,7 +27,6 @@ module.exports = {
           data = data.replace('kg','');
           var weightInGrams = data.replace('.','');
           if(weightInGrams != 000){
-            return weightInGrams;
             console.log(weightInGrams);
             port.close(function (err) {
               return weightInGrams;
