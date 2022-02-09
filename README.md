@@ -12,7 +12,7 @@ Result is in json and looks like this:
 
 
 ## Start the server
-To start the api server go to the directory on the pi:
+To start the api server run the following commands when shelled into the pi (I recommend using vnc viewer so that you don't have to keep the terminal open on your own pc):
 ```
 cd datawood/webserver 
 sudo node backgroundScaleReader.js
