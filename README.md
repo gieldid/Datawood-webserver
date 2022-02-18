@@ -31,8 +31,8 @@ The server.js file is the nodejs webserver once the following url is called: wei
 
 ## Installing 
 
-Setup the pi with nodejs: https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp
-Install mariadb: https://raspberrytips.com/install-mariadb-raspberry-pi/
+- Setup the pi with nodejs: https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp
+- Install mariadb: https://raspberrytips.com/install-mariadb-raspberry-pi/
 
 Find a suitable directory on your pi and download this git repo to it. In the same directory as the package.json run the following command:
 
